@@ -5,13 +5,29 @@ import { useSectionInView } from "@/hooks/hooks";
 import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
-import { BsArrowRight, BsDownload, BsGithub, BsLinkedin } from "react-icons/bs";
+import {
+  BsArrowDown,
+  BsArrowRight,
+  BsCopy,
+  BsDownload,
+  BsGithub,
+  BsLinkedin,
+} from "react-icons/bs";
 import Link from "next/link";
 
 const linkedInUrl = "https://linkedin.com/in/philipgeorgeio";
 const githubUrl = "https://github.com/pg328";
+const emailAddress = "philipgeorge1337@yahoo.co.uk";
+const copyText = async (text: string) => {
+  try {
+    await navigator.clipboard.writeText(text);
+    //SUCCESS
+  } catch (error) {
+    //ERROR
+  }
+};
 
-const Introduction = (props: {}) => {
+const Introduction = () => {
   const { ref } = useSectionInView("Home", 0.5);
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
   return (
@@ -60,12 +76,15 @@ const Introduction = (props: {}) => {
         <span className="font-medium">
           <span className="font-bold">{"Hi, I'm Phil! "}</span>
           {"I'm a "}
-          <span className="font-bold">{"full-stack software engineer "}</span>
+          <span className="font-bold">{"software engineer "}</span>
           {"with "}
           <span className="font-bold">{"4+ years of experience "}</span>
-          <span className="font-light">{"(as of 2023)!"}</span>
           {
-            "This site is under construction right now, but if you like what you see (and you're hiring) then feel free to download my CV!"
+            "building and maintaining complex globally deployed front-end and back-end code, and constructing robust system architecture "
+          }
+          <span className="font-light">{"(as of 2023). "}</span>
+          {
+            "This site is under construction right now, but if you've seen enough then feel free get in touch!"
           }
         </span>
       </motion.h1>
@@ -85,7 +104,7 @@ const Introduction = (props: {}) => {
               <BsArrowRight />
             </div>
             <div className="sm:hidden">
-              <BsArrowRight />
+              <BsArrowDown />
             </div>
           </div>{" "}
         </Link>{" "}
@@ -97,6 +116,15 @@ const Introduction = (props: {}) => {
           {"Download CV "}
           <BsDownload className="opacity-60 group-hover:translate-y-1 transition" />
         </a>
+        <button
+          className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
+          onClick={() => {
+            copyText(emailAddress);
+          }}
+        >
+          {"Copy my email address "}
+          <BsCopy className="opacity-60 group-hover:translate-y-1 transition" />
+        </button>
         <a
           className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
           href={linkedInUrl}
