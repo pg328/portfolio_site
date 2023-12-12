@@ -53,7 +53,7 @@ const Introduction = (props: {}) => {
         </div>
       </div>
       <motion.h1
-        className="m-2"
+        className="w-full sm:m-2"
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}
       >
@@ -70,7 +70,7 @@ const Introduction = (props: {}) => {
         </span>
       </motion.h1>
 
-      <div className="flex gap-2">
+      <div className="flex gap-2 flex-col sm:flex-row items-center">
         <Link
           href="#contact"
           onClick={() => {
@@ -79,7 +79,15 @@ const Introduction = (props: {}) => {
           }}
           className="bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full"
         >
-          Contact me here <BsArrowRight />
+          Contact me here{" "}
+          <div>
+            <div className="hidden sm:flex">
+              <BsArrowRight />
+            </div>
+            <div className="sm:hidden">
+              <BsArrowRight />
+            </div>
+          </div>{" "}
         </Link>{" "}
         <a
           className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
