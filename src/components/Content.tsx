@@ -35,7 +35,7 @@ const copyText = async (text: string) => {
 const Content = () => {
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main className="flex min-h-screen flex-col items-center justify-between">
       <Introduction
         setActiveSection={setActiveSection}
         setTimeOfLastClick={setTimeOfLastClick}
@@ -101,7 +101,7 @@ const Introduction = (props: SectionProps) => {
     <section
       ref={ref}
       id="home"
-      className="pt-9 px-24 flex flex-col gap-y-9 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]"
+      className="mt-24 flex flex-col gap-y-9 max-w-[50rem] text-center sm:mb-0 scroll-mt-40"
     >
       <div className="flex items-center justify-center">
         <div className="relative">
@@ -155,7 +155,7 @@ const Introduction = (props: SectionProps) => {
         whileInView="animate"
         viewport={{ once: true }}
       >
-        <div className="flex gap-3 flex-col flex-wrap sm:flex-row items-center">
+        <div className="flex gap-3 flex-col md:flex-row items-center">
           <Link
             href="#contact"
             onClick={() => {
@@ -166,10 +166,10 @@ const Introduction = (props: SectionProps) => {
           >
             Contact me here{" "}
             <div>
-              <div className="hidden sm:flex">
+              <div className="hidden md:flex">
                 <BsArrowRight />
               </div>
-              <div className="sm:hidden">
+              <div className="md:hidden">
                 <BsArrowDown />
               </div>
             </div>{" "}
@@ -231,28 +231,28 @@ const About = (props: SectionProps) => {
         initial="initial"
         whileInView="animate"
         viewport={{ once: true }}
-        className="mt-3 p-3 max-w-[42rem] border border-black/5 dark:border-white/5 overflow-hidden sm:pr-8 rounded-sm"
+        className="mt-3 mx-1 p-3 max-w-[42rem] border border-black/5 dark:border-white/5 overflow-hidden sm:pr-8 rounded-sm"
       >
-        <p>
+        <p className="mt-2 text-lg">
           {`Over the years, I've been lucky enough to work on some exciting
           projects:`}
         </p>
 
         {/* Professional Projects */}
-        <ul>
-          <li>
+        <ul className="mt-2 pl-2">
+          <li className="mt-2">
             <strong>Healthcare Innovation:</strong> At MetadataWorks, I helped
             develop a search app for the NHS that made managing health data
             concepts easier. It was rewarding to see our work improve
             accessibility for healthcare professionals.
           </li>
-          <li>
+          <li className="mt-2">
             <strong>Retail Platform Modernization:</strong> While at Dunelm, I
             worked on updating key parts of their platform, making things run
             smoother and faster. I also found ways to make data retrieval more
             efficient, which was pretty cool.
           </li>
-          <li>
+          <li className="mt-2">
             <strong>Construction Technology:</strong>{" "}
             {`At Disperse, I jumped into
             a complex codebase and contributed to features like the "Mark Up and
@@ -262,20 +262,22 @@ const About = (props: SectionProps) => {
         </ul>
 
         {/* Personal Projects */}
-        <p>In my free time, I enjoy working on personal projects:</p>
-        <ul>
-          <li>
+        <p className="mt-2 text-lg">
+          In my free time, I enjoy working on personal projects:
+        </p>
+        <ul className="mt-2 pl-2">
+          <li className="mt-2">
             <strong>Decentralized Video Chat:</strong> During the lockdowns, I
             built a custom video chat app with features like picture-in-picture
             and screen-sharing. It was a fun way to stay connected with friends
             and family.
           </li>
-          <li>
+          <li className="mt-2">
             <strong>AI in Music Composition:</strong> I experimented with AI
             models to see how they could analyze music and evoke emotions.
             Combining tech with creativity was a fascinating experience.
           </li>
-          <li>
+          <li className="mt-2">
             <strong>Countdown Numbers Game:</strong>{" "}
             {`I created a terminal-based
             game inspired by the TV show "Countdown." I'm currently working on
@@ -284,7 +286,7 @@ const About = (props: SectionProps) => {
         </ul>
 
         {/* Closing Statement */}
-        <p>
+        <p className="mt-2 text-lg">
           {`I believe in writing clean, maintainable code and enjoy collaborating
           with others. Whether it's through pair programming or sharing
           knowledge with my team, I value the power of teamwork.`}
@@ -453,7 +455,7 @@ const Skills = (props: SectionProps) => {
     <section
       ref={ref}
       id="skills"
-      className="max-w-[53rem] scroll-mt-28 text-center sm:my-20"
+      className="max-w-[53rem] scroll-mt-28 text-center sm:my-20 px-2"
     >
       <SectionHeading>Skills</SectionHeading>
       <ul className="flex flex-wrap justify-center gap-2 text-lg text-gray-800">
@@ -485,7 +487,7 @@ const Contact = (props: SectionProps) => {
     <section
       ref={ref}
       id="contact"
-      className="pt-8 w-[min(100%,38rem)] text-center scroll-mt-24"
+      className="pt-8 w-[min(100%,38rem)] text-center scroll-mt-24 px-2"
     >
       <SectionHeading>Contact Me!</SectionHeading>
       <p className="text-gray-700 dark:text-gray-500 mt-6">
