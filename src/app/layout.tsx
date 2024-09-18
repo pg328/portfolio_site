@@ -21,7 +21,7 @@ export default function RootLayout({
 }) {
   return (
     <ThemeContextProvider>
-      <html lang="en">
+      <html lang="en" className="!scroll-smooth">
         <body
           className={`${raleway.className} bg-gray-50 text-gray-950 dark:bg-gray-950 dark:text-gray-50`}
         >

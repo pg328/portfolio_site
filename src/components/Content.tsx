@@ -35,7 +35,7 @@ const copyText = async (text: string) => {
 const Content = () => {
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24 scroll-smooth">
+    <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <Introduction
         setActiveSection={setActiveSection}
         setTimeOfLastClick={setTimeOfLastClick}
