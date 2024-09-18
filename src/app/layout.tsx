@@ -4,6 +4,8 @@ import "./globals.css";
 import { Header } from "@/components/Header";
 import ThemeContextProvider from "@/context/theme-context";
 import ActiveSectionContextProvider from "@/context/active-section-context";
+import { Toaster } from "react-hot-toast";
+import ThemeSwitch from "@/components/ThemeSwitch";
 
 const raleway = Raleway({ subsets: ["latin"] });
 
@@ -28,6 +30,8 @@ export default function RootLayout({
           <ActiveSectionContextProvider>
             <Header />
             {children}
+            <ThemeSwitch />
+            <Toaster position="bottom-right" />
           </ActiveSectionContextProvider>
         </body>
       </html>

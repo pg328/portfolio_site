@@ -6,7 +6,7 @@ import Link from "next/link";
 import clsx from "clsx";
 import { useActiveSectionContext } from "@/context/active-section-context";
 
-const tabs = ["Home", "About", "Contact", "Projects"] as const;
+const tabs = ["Home", "About", "Projects", "Skills", "Contact"] as const;
 export type TabType = typeof tabs;
 export const Header = () => {
   const { activeSection, setActiveSection, setTimeOfLastClick } =
@@ -32,7 +32,7 @@ export const Header = () => {
                 className={clsx(
                   "flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition dark:text-gray-500 dark:hover:text-gray-300",
                   {
-                    "text-gray-950 dark:text-gray-200": activeSection === tab,
+                    "text-gray-950 dark:text-gray-100": activeSection === tab,
                   },
                 )}
                 href={`#${tab.toLowerCase()}`}
@@ -44,7 +44,7 @@ export const Header = () => {
                 {tab}
                 {tab === activeSection && (
                   <motion.span
-                    className=" flex justify-center items-center bg-gray-100 rounded-full absolute inset-0 -z-10 dark:bg-black dark:bg-opacity-20"
+                    className=" flex justify-center items-center bg-gray-100 rounded-full absolute inset-0 -z-10 dark:bg-white dark:bg-opacity-20"
                     layoutId="activeSection"
                     transition={{
                       type: "spring",
