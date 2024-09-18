@@ -101,7 +101,7 @@ const Introduction = (props: SectionProps) => {
     <section
       ref={ref}
       id="home"
-      className="pt-9 flex flex-col gap-y-9 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]"
+      className="pt-9 px-24 flex flex-col gap-y-9 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]"
     >
       <div className="flex items-center justify-center">
         <div className="relative">
@@ -136,16 +136,16 @@ const Introduction = (props: SectionProps) => {
         </div>
       </div>
       <motion.h1
-        className="w-full sm:m-3"
+        className="mb-10 mt-4 px-4 text-xl font-medium !leading-[1.5] sm:text-2xl"
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}
       >
         <span className="font-medium">
-          <span className="font-bold">{"Hi, I'm Phil! "}</span>
-          {"I'm a "}
+          <span className="font-bold">{"Hi, I'm Phil, "}</span>
+          {"a "}
           <span className="font-bold">{"full-stack software engineer "}</span>
           {
-            " based in London. I have a passion for creating software that makes a real difference in people's lives. Whether it's enhancing healthcare tools or building personal projects for fun, I love tackling challenges and learning along the way. Thanks for stopping by my website!"
+            "based in London with a passion for creating software that makes a meaningful impact on people's lives. Whether it's improving healthcare tools or diving into personal projects for fun, I love tackling challenges and learning new things along the way. Thanks for visiting my website—feel free to explore and reach out!"
           }
         </span>
       </motion.h1>
@@ -155,7 +155,7 @@ const Introduction = (props: SectionProps) => {
         whileInView="animate"
         viewport={{ once: true }}
       >
-        <div className="flex gap-3 flex-col sm:flex-row items-center">
+        <div className="flex gap-3 flex-col flex-wrap sm:flex-row items-center">
           <Link
             href="#contact"
             onClick={() => {
@@ -179,7 +179,7 @@ const Introduction = (props: SectionProps) => {
             href="/PhilipGeorgeCVWithDetail.pdf"
             download
           >
-            {"Download CV "}
+            {"CV "}
             <BsDownload className="opacity-61 group-hover:translate-y-1 transition" />
           </a>
           <a
@@ -187,7 +187,7 @@ const Introduction = (props: SectionProps) => {
             href="/PhilipGeorgeCV.pdf"
             download
           >
-            {"Download Short CV "}
+            {"Short CV "}
             <BsDownload className="opacity-61 group-hover:translate-y-1 transition" />
           </a>
           <button
