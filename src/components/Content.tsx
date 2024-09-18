@@ -144,14 +144,8 @@ const Introduction = (props: SectionProps) => {
           <span className="font-bold">{"Hi, I'm Phil! "}</span>
           {"I'm a "}
           <span className="font-bold">{"full-stack software engineer "}</span>
-          {"with "}
-          <span className="font-bold">{"4+ years of experience "}</span>
           {
-            "building and maintaining complex globally deployed front-end and back-end code, and constructing robust system architecture "
-          }
-          <span className="font-light">{"(as of 2024). "}</span>
-          {
-            "My journey has taken me across diverse industries, including healthcare, retail, and construction technology. This site is under construction right now, but if you've seen enough then feel free get in touch!"
+            " based in London. I have a passion for creating software that makes a real difference in people's lives. Whether it's enhancing healthcare tools or building personal projects for fun, I love tackling challenges and learning along the way. Thanks for stopping by my website!"
           }
         </span>
       </motion.h1>
@@ -232,17 +226,70 @@ const About = (props: SectionProps) => {
   return (
     <section ref={ref} id="about" className="pt-8 scroll-mt-24">
       <SectionHeading>About Me</SectionHeading>
-      <motion.p
+      <motion.div
         variants={fadeInAnimationVariants}
         initial="initial"
         whileInView="animate"
         viewport={{ once: true }}
         className="mt-3 p-3 max-w-[42rem] border border-black/5 dark:border-white/5 overflow-hidden sm:pr-8 rounded-sm"
       >
-        {
-          "Hi, I’m Phil! I'm a Full-Stack Engineer passionate about solving real-world problems through technology. Since 2019, I've been building impactful solutions using JavaScript/TypeScript, React, Node.js, SQL, Jest, GraphQL, Storybook, AWS Lambda, and Postgres. My journey has taken me across diverse industries, including healthcare, retail, and construction technology"
-        }
-      </motion.p>
+        <p>
+          {`Over the years, I've been lucky enough to work on some exciting
+          projects:`}
+        </p>
+
+        {/* Professional Projects */}
+        <ul>
+          <li>
+            <strong>Healthcare Innovation:</strong> At MetadataWorks, I helped
+            develop a search app for the NHS that made managing health data
+            concepts easier. It was rewarding to see our work improve
+            accessibility for healthcare professionals.
+          </li>
+          <li>
+            <strong>Retail Platform Modernization:</strong> While at Dunelm, I
+            worked on updating key parts of their platform, making things run
+            smoother and faster. I also found ways to make data retrieval more
+            efficient, which was pretty cool.
+          </li>
+          <li>
+            <strong>Construction Technology:</strong>{" "}
+            {`At Disperse, I jumped into
+            a complex codebase and contributed to features like the "Mark Up and
+            Share" tool. It was a whirlwind experience, but I learned a ton and
+            enjoyed every minute.`}
+          </li>
+        </ul>
+
+        {/* Personal Projects */}
+        <p>In my free time, I enjoy working on personal projects:</p>
+        <ul>
+          <li>
+            <strong>Decentralized Video Chat:</strong> During the lockdowns, I
+            built a custom video chat app with features like picture-in-picture
+            and screen-sharing. It was a fun way to stay connected with friends
+            and family.
+          </li>
+          <li>
+            <strong>AI in Music Composition:</strong> I experimented with AI
+            models to see how they could analyze music and evoke emotions.
+            Combining tech with creativity was a fascinating experience.
+          </li>
+          <li>
+            <strong>Countdown Numbers Game:</strong>{" "}
+            {`I created a terminal-based
+            game inspired by the TV show "Countdown." I'm currently working on
+            enhancing it with Rust and WebAssembly to make it even better.`}
+          </li>
+        </ul>
+
+        {/* Closing Statement */}
+        <p>
+          {`I believe in writing clean, maintainable code and enjoy collaborating
+          with others. Whether it's through pair programming or sharing
+          knowledge with my team, I value the power of teamwork.`}
+        </p>
+      </motion.div>
     </section>
   );
 };
@@ -263,7 +310,7 @@ const projectsData = [
     url: "https://github.com/pg328/CountdownNumbersGame",
     thumbnail: "/NumbersGameScreenshot.png",
     thumbnailDimensions: { height: 1684, width: 1644 },
-    stack: ["Python", "Terminal CLI Development", "ASCII"],
+    stack: ["Python", "Bash Scripting", "Terminal CLI Development", "ASCII"],
   },
   {
     title: "Occam's Protocol - App",
