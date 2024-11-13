@@ -6,6 +6,7 @@ import ThemeContextProvider from "@/context/theme-context";
 import ActiveSectionContextProvider from "@/context/active-section-context";
 import { Toaster } from "react-hot-toast";
 import ThemeSwitch from "@/components/ThemeSwitch";
+import { Analytics } from "@vercel/analytics/react";
 
 const raleway = Raleway({ subsets: ["latin"] });
 
@@ -21,6 +22,7 @@ export default function RootLayout({
 }) {
   return (
     <ThemeContextProvider>
+      <Analytics />
       <html lang="en" className="!scroll-smooth">
         <body
           className={`${raleway.className} bg-gray-50 text-gray-950 dark:bg-gray-950 dark:text-gray-50`}
