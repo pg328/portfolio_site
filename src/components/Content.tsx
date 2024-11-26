@@ -23,6 +23,7 @@ import toast from "react-hot-toast";
 const linkedInUrl = "https://linkedin.com/in/philipgeorgeio";
 const githubUrl = "https://github.com/pg328";
 const emailAddress = "philipgeorge1337@yahoo.co.uk";
+const phoneNumber = "+447484188198";
 const copyText = async (text: string) => {
   try {
     await navigator.clipboard.writeText(text);
@@ -197,6 +198,15 @@ const Introduction = (props: SectionProps) => {
             }}
           >
             {"Copy my email address "}
+            <BsCopy className="opacity-61 group-hover:translate-y-1 transition" />
+          </button>
+          <button
+            className="group bg-white px-8 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
+            onClick={() => {
+              copyText(phoneNumber);
+            }}
+          >
+            {"Copy my phone number! "}
             <BsCopy className="opacity-61 group-hover:translate-y-1 transition" />
           </button>
           <a
