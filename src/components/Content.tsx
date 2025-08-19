@@ -180,7 +180,7 @@ const Introduction = (props: SectionProps) => {
             href="/PhilipGeorgeCVWithDetail.pdf"
             download
           >
-            {"CV "}
+            {"Multi-Page CV "}
             <BsDownload className="opacity-61 group-hover:translate-y-1 transition" />
           </a>
           <a
@@ -188,7 +188,7 @@ const Introduction = (props: SectionProps) => {
             href="/PhilipGeorgeCV.pdf"
             download
           >
-            {"Short CV "}
+            {"One-Page CV "}
             <BsDownload className="opacity-61 group-hover:translate-y-1 transition" />
           </a>
           <button
