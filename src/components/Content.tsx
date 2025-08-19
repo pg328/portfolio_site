@@ -244,62 +244,44 @@ const About = (props: SectionProps) => {
         className="mt-3 mx-1 p-3 max-w-[42rem] border border-black/5 dark:border-white/5 overflow-hidden sm:pr-8 rounded-sm"
       >
         <p className="mt-2 text-lg">
-          {`Over the years, I've been lucky enough to work on some exciting
-          projects:`}
+          {`
+          I’m Philip George, a London-based full-stack engineer who enjoys
+          taking ambiguous ideas and turning them into fast, accessible
+          software. I cut my teeth at MetaDataWorks (hire #6), where I served as
+          the sole front-end developer on a medical-ontology browser for the
+          NHS. I ran weekly demos with non-technical stakeholders, iterated
+          quickly, and helped win a £1.2M, three-year contract. Promoted soon
+          after, I led the front end of our flagship product, delivering an
+          accessibility overhaul to meet government standards and a
+          JavaScript→TypeScript migration that reduced runtime errors and
+          improved developer velocity.
+`}
         </p>
-
-        {/* Professional Projects */}
-        <ul className="mt-2 pl-2">
-          <li className="mt-2">
-            <strong>Healthcare Innovation:</strong> At MetadataWorks, I helped
-            develop a search app for the NHS that made managing health data
-            concepts easier. It was rewarding to see our work improve
-            accessibility for healthcare professionals.
-          </li>
-          <li className="mt-2">
-            <strong>Retail Platform Modernization:</strong> While at Dunelm, I
-            worked on updating key parts of their platform, making things run
-            smoother and faster. I also found ways to make data retrieval more
-            efficient, which was pretty cool.
-          </li>
-          <li className="mt-2">
-            <strong>Construction Technology:</strong>{" "}
-            {`At Disperse, I jumped into
-            a complex codebase and contributed to features like the "Mark Up and
-            Share" tool. It was a whirlwind experience, but I learned a ton and
-            enjoyed every minute.`}
-          </li>
-        </ul>
-
-        {/* Personal Projects */}
         <p className="mt-2 text-lg">
-          In my free time, I enjoy working on personal projects:
+          {`
+          At Dunelm, I helped modernise a core part of the platform: introducing
+          a Node/GraphQL aggregation layer with server-side caching, simplifying
+          data access while improving performance. I also delivered a 10×
+          page-load improvement by fixing inefficient endpoints and implementing
+          end-to-end pagination. At Disperse, I shipped a “Mark Up & Share”
+          feature for annotating and sharing 360° images, and I owned multiple
+          zero-rollback releases. Alongside full-time roles, I’ve consulted and
+          built small products—most recently a Stripe-enabled online store
+          deployed on Vercel, and technical support on a JetBrains “Trend Talks”
+          campaign.
+`}
         </p>
-        <ul className="mt-2 pl-2">
-          <li className="mt-2">
-            <strong>Decentralized Video Chat:</strong> During the lockdowns, I
-            built a custom video chat app with features like picture-in-picture
-            and screen-sharing. It was a fun way to stay connected with friends
-            and family.
-          </li>
-          <li className="mt-2">
-            <strong>AI in Music Composition:</strong> I experimented with AI
-            models to see how they could analyze music and evoke emotions.
-            Combining tech with creativity was a fascinating experience.
-          </li>
-          <li className="mt-2">
-            <strong>Countdown Numbers Game:</strong>{" "}
-            {`I created a terminal-based
-            game inspired by the TV show "Countdown." I'm currently working on
-            enhancing it with Rust and WebAssembly to make it even better.`}
-          </li>
-        </ul>
 
         {/* Closing Statement */}
         <p className="mt-2 text-lg">
-          {`I believe in writing clean, maintainable code and enjoy collaborating
-          with others. Whether it's through pair programming or sharing
-          knowledge with my team, I value the power of teamwork.`}
+          {`
+          My toolbox: React, TypeScript, Node, GraphQL, Postgres, and AWS. I
+          value readable code, small PRs, TDD where it pays off, and frequent
+          demos. I’m currently open to mid/senior full-stack roles (or early
+          engineering roles at startups). If you need someone who can ship,
+          explain trade-offs clearly, and keep performance and accessibility
+          front-of-mind, I’d love to chat.
+`}
         </p>
       </motion.div>
     </section>
